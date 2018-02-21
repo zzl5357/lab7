@@ -1,15 +1,15 @@
 var projects = require('../projects.json')['projects'];
 
 exports.projectInfo = function(request, response) { 
-	var projectID = req.params.id;
+	var projectID = request.params.id;
 	var project = getProjectData(projectID);
-  	res.json(project);
+  	response.json(project);
 }
 
 exports.view = function(request, response) {
-	var projectID = req.params.id;
+	var projectID = request.params.id;
 	var project = getProjectData(projectID);
-	res.render('project', project);
+	response.render('project', project);
 }
 
 function getProjectData(projectID) {

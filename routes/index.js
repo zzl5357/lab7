@@ -5,5 +5,5 @@ var projects = require('../projects.json');
  */
 
 exports.view = function(request, response){
-  	res.render('index', projects);
+  	response.render('index', projects);
 };
